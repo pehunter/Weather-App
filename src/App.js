@@ -10,7 +10,6 @@ function App() {
     useEffect(() => {
       const getCards = async () => {
         const newCards = await createCards();
-        console.log(newCards);
         setCards(newCards)
       }
 
@@ -28,11 +27,7 @@ function App() {
           low: Math.round(data.main.temp_min)
         };
         newCards = [...newCards, cardObj];
-        console.log(newCards);
       }
-      console.log("thesecards: ");
-      console.log(newCards);
-      console.log("end");
       return newCards
     }
 
